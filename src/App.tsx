@@ -1,6 +1,9 @@
+import { TodoInput } from "./components/todo-input"
 
 export const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <TodoInput />
+    </div>
   )
 }
