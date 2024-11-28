@@ -1,11 +1,10 @@
 import { create } from 'zustand';
-import { Todo, TodoStore } from '../types/todo';
+import { TodoStore } from '../types/todo';
 
 export const useTodoStore = create<TodoStore>((set) => ({
   todos: [],
   searchQuery: '',
-  theme: 'light',
-  
+
   addTodo: (title: string) =>
     set((state) => ({
       todos: [
@@ -41,10 +40,5 @@ export const useTodoStore = create<TodoStore>((set) => ({
   setSearchQuery: (query: string) =>
     set(() => ({
       searchQuery: query,
-    })),
-
-  toggleTheme: () =>
-    set((state) => ({
-      theme: state.theme === 'light' ? 'dark' : 'light',
     })),
 }));
